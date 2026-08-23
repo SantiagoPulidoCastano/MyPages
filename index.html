@@ -12,69 +12,42 @@
   <nav>
     <ul>
       <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#solicitudes">Solicitudes</a></li>
-      <li><a href="#editor">Editor Musical</a></li>
+      <li><a href="#comunicate">Comunicate</a></li>
+      <li><a href="#derechos">Derechos de Autor</a></li>
     </ul>
     <button id="modoToggle">🌙</button>
+
   </nav>
 
   <header id="inicio">
     <div class="encabezado">
       <div class="texto-header">
-        <h1>Santiago Pulido Castaño"</h1>
-        <p class="subtitulo">Lorem Ipsum</p>
+        <h1>Santiago Pulido Castaño</h1>
+        <p class="subtitulo">Desarrollador Web</p>
       </div>
-      <img src="img/audifonos.jpg" alt="Estudiantes con audífonos" class="imagen-audifonos">
     </div>
   </header>
 
   <main>
-    <section class="solicitudes-logo" id="solicitudes">
-      <div class="solicitudes-tareas">
-        <h2>Solicita tu canción</h2>
+    <section class="comunicate" id="comunicate">
+      <div class="comunicate-texto">
+        <h2>Comunicate conmigo</h2>
         <form id="formSolicitud">
           <input type="text" id="nombre" placeholder="Nombre" required>
           <input type="email" id="email" placeholder="Correo electrónico" required>
-          <input type="text" id="comentario" placeholder="Canción pedida" required>
+          <input type="text" id="message" placeholder="Mensaje" required>
           <div class="botones">
-            <button type="submit">Agregar</button>
-            <button type="button" id="descargarBtn">Descargar CSV</button>
+            <button type="submit">Enviar</button>
           </div>
         </form>
-        <ul id="listaSolicitudes">
-          <li class="vacio">Ninguna solicitud aún</li>
-        </ul>
-      </div>
-
-      <div class="logo-box">
-        <div class="logo-flip" id="logoFlip">
-          <div class="logo-front">
-            <img src="img/imagenlogo.png" alt="Logo IED República de China" class="logo-colegio">
-          </div>
-          <div class="logo-back">
-            <p><strong>Rupttoria Studios</strong></p>
-            <p>asd</p>
-            <p>fiumva.</p>
-          </div>
-        </div>
       </div>
     </section>
-
-    <section class="editor-audio" id="editor">
-      <h2>Editor de Audio Escolar</h2>
-      <input type="file" id="audioFile" accept="audio/*"><br><br>
-      <audio id="audioPlayer" controls></audio><br><br>
-      <label>Inicio (segundos): <input type="number" id="startTime" min="0" value="0"></label>
-      <label>Fin (segundos): <input type="number" id="endTime" min="0" value="10"></label><br><br>
-      <button id="recortarBtn">Recortar con Fade y Descargar</button>
-    </section>
-  </main>
-
   <footer>
-    <p>Derechos reservados</p>
+    <div class="derechos" id="derechos">
+      <h2>Derechos de Autor</h2>
+      <p>Todos los derechos reservados © 2026 Santiago Pulido Castaño</p>
     <p>Desarrollado por Santiago Pulido Castaño</p>
   </footer>
-
-  <script src="editor.js"></script>
+  <script src="functions.js"></script>
 </body>
 </html>
