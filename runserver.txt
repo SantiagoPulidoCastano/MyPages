@@ -1,2 +1,0 @@
-cd "C:\Users\pulid\Downloads\Nueva carpeta"
-py guardarcanciones.py
