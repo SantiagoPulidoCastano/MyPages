@@ -16,7 +16,6 @@ document.getElementById("formSolicitud").addEventListener("submit", async (e) =>
 
   const datos = {
     nombre: document.getElementById("nombre").value.trim(),
-    email: document.getElementById("email").value.trim(),
     message: document.getElementById("message").value.trim()
   };
 
