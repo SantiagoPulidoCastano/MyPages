@@ -1,4 +1,4 @@
-:root {
+:root { /*Revisar colores y optimización*/
   --bg: #ffffff;
   --text: #ffffff;
   --accent: #474646;
@@ -14,17 +14,6 @@ body {
   color: var(--text);
   font-family: 'Segoe UI', sans-serif;
   transition: all 0.3s ease;
-}
-
-body.dark {
- --bg: #060606;
-  --text: #ffffff;
-  --accent: #474646;
-  --card: #242424;
-  --header: #1e1e1e;
-  --input: #000000;
-  --border: #474646;
-  --muted: #cccccc;
 }
 
 nav {
@@ -48,14 +37,7 @@ nav a {
   font-size: 1.1em;
 }
 
-#modoToggle {
-  background: white;
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2em;
-}
+
 
 header {
   
@@ -101,8 +83,7 @@ form {
   gap: 0.8rem;
 }
 
-input[type="text"],
-input[type="email"] {
+input[type="text"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
