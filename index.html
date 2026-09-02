@@ -8,6 +8,7 @@
   <meta name="author" content="Santiago Pulido Castaño">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <nav>
     <ul>
@@ -15,37 +16,39 @@
       <li><a href="#Destacado">Destacado</a></li>
       <li><a href="#derechos">Derechos de Autor</a></li>
     </ul>
-    <button id="modoToggle"></button> <!--Arreglar modo oscuro-->
   </nav>
 
-  <header id="inicio">
-    <div class="encabezado">
-      <div class="texto-header">
-        <h1>SANERAF</h1>
-        <p class="subtitulo">Descubre la magia de las figuras</p>
-      </div>
-    </div>
+  <header>
   </header>
 
   <main>
-      <section class="Destacado" id="Destacado">
-      <div class="destacado-texto">
-        <h2>Comunicate con nosotros</h2>
-        <form id="formSolicitud">
-          <input type="text" id="nombre" placeholder="Nombre" required>
-          <input type="text" id="message" placeholder="Mensaje" required>
-          <div class="botones">
-            <button onclick="fun()" type="submit">Enviar</button>
-          </div>
-        </form>
+      <section id="inicio">
+        <div class="titulo">
+        <h2> Bienvenido a SANERAF</h2>
       </div>
-    </section>
+      <section  class ="Destacado"id="Destacado">
+    <div class="galeria">
+        <div class="borde-gogeta">
+        <img class="gogeta" src="IMG/Gogeta.jpg" alt="Gogeta">
+        </div>
+
+        <div class="borde-vegito">
+        <img class="vegito" src="IMG/Vegito.jpg" alt="Vegito" >
+        </div>
+
+        <div class="borde-god">
+        <img class="god" src="IMG/God.jpg" alt="God" >
+        </div>
+    </div>
+      </section>
+  </main>
+
   <footer>
     <div class="derechos" id="derechos">
       <h2>Derechos de Autor</h2>
       <p>Todos los derechos reservados © 2026 SANERAF. <br> Prohibida la reproducción total o parcial de este sitio web sin autorización expresa.</p>
     </div>
   </footer>
-  <script src="functions.js"></script>
+
 </body>
 </html>
