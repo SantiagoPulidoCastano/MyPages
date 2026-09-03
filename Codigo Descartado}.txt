@@ -187,3 +187,27 @@ header {
   color: #3b3b3b;
   margin-top: 0.5rem;
 }
+
+
+
+.borde-gogeta{
+  padding: 5px;
+  display: flex;
+  background: linear-gradient(45deg, #ff0000, #8000ff, #00cfff);
+  border-radius: 15px; 
+}
+
+.borde-vegito{
+  padding: 5px;
+  display: flex;
+  background: linear-gradient(45deg, #ff0000, #8000ff, #00cfff);
+  border-radius: 15px;
+}
+
+.borde-god{
+  padding: 5px;
+  display: flex;
+  background: linear-gradient(45deg, #ff0000, #8000ff, #00cfff);
+  border-radius: 15px;
+}
+

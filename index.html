@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Santiago Pulido Castaño">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
 </head>
 
 <body>
@@ -19,29 +20,55 @@
   </nav>
 
   <header>
+      <div class="inicio" id="inicio">
+        <h1>Bienvenido a SANERAF</h1>
+        <p>Conoce la magia de las figuras.</p>
+      </div>
   </header>
 
   <main>
-      <section id="inicio">
-        <div class="titulo">
-        <h2> Bienvenido a SANERAF</h2>
-      </div>
-      <section  class ="Destacado"id="Destacado">
-    <div class="galeria">
+  <section id="fusiones">
+    <div class="fusiones">
+      <h2> Fusiones más adquiridas</h2>
+    </div>
+    
+    <section class="Destacado" id="Destacado">
+      <div class="galeria">
         <div class="borde-gogeta">
-        <img class="gogeta" src="IMG/Gogeta.jpg" alt="Gogeta">
+          <!-- Agregamos los datos de la figura en atributos data-* -->
+          <img class="gogeta img-comic" 
+               src="IMG/Gogeta.jpg" 
+               alt="Gogeta"
+               data-titulo="Gogeta Blue"
+               data-desc="Fusión por danza metamorana de Goku y Vegeta. Figura de alta precisión."
+               data-precio="$49.99">
         </div>
 
         <div class="borde-vegito">
-        <img class="vegito" src="IMG/Vegito.jpg" alt="Vegito" >
+          <img class="vegito img-comic" 
+               src="IMG/Vegito.jpg" 
+               alt="Vegito"
+               data-titulo="Vegito Blue"
+               data-desc="Fusión mediante los pendientes Pothara. Incluye accesorios de ataque."
+               data-precio="$52.00">
         </div>
+      </div>
+    </section>
+  </section>
 
-        <div class="borde-god">
-        <img class="god" src="IMG/God.jpg" alt="God" >
-        </div>
+  <!-- Ventana emergente Pop Art -->
+  <dialog id="modal-figura" class="modal-comic">
+    <button id="cerrar-modal" class="btn-cerrar">X</button>
+    <div class="contenido-modal">
+      <img id="modal-img" src="" alt="Figura seleccionada">
+      <div class="modal-info">
+        <h3 id="modal-titulo">Cargando...</h3>
+        <p id="modal-desc"></p>
+        <div id="modal-precio" class="etiqueta-precio">$0.00</div>
+      </div>
     </div>
-      </section>
-  </main>
+  </dialog>
+</main>
 
   <footer>
     <div class="derechos" id="derechos">
@@ -49,6 +76,45 @@
       <p>Todos los derechos reservados © 2026 SANERAF. <br> Prohibida la reproducción total o parcial de este sitio web sin autorización expresa.</p>
     </div>
   </footer>
+
+  <dialog id="modal-figura" class="modal-comic">
+    <button id="cerrar-modal" class="cerrar-modal">X</button>
+    <div class="contenido-modal">
+      <img id="imagen-modal" src="" alt="Figura">
+      <div class="informacion-modal">
+        <h3 id="nombre-figura">Nombre</h3>
+        <p id="descripcion-figura">Descripción</p>
+        <span id="modal-precio">Precio</span>
+      </div>
+    </div>
+
+
+
+  </dialog>
+  <script>
+  const modal = document.getElementById('modal-figura');
+  const btnCerrar = document.getElementById('cerrar-modal');
+
+  // Abre el modal al hacer clic en cualquier imagen con la clase img-comic
+  document.querySelectorAll('.img-comic').forEach(imagen => {
+    imagen.addEventListener('click', () => {
+      document.getElementById('modal-img').src = imagen.src;
+      document.getElementById('modal-titulo').textContent = imagen.dataset.titulo;
+      document.getElementById('modal-desc').textContent = imagen.dataset.desc;
+      document.getElementById('modal-precio').textContent = imagen.dataset.precio;
+      
+      modal.showModal();
+    });
+  });
+
+  // Cerrar modal al presionar la X
+  btnCerrar.addEventListener('click', () => modal.close());
+
+  // Cerrar al hacer clic en el fondo oscuro
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.close();
+  });
+</script>
 
 </body>
 </html>
