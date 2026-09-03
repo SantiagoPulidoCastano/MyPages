@@ -26,48 +26,24 @@
       </div>
   </header>
 
-  <main>
-  <section id="fusiones">
-    <div class="fusiones">
-      <h2> Fusiones más adquiridas</h2>
-    </div>
-    
-    <section class="Destacado" id="Destacado">
-      <div class="galeria">
-        <div class="borde-gogeta">
-          <!-- Agregamos los datos de la figura en atributos data-* -->
-          <img class="gogeta img-comic" 
-               src="IMG/Gogeta.jpg" 
-               alt="Gogeta"
-               data-titulo="Gogeta Blue"
-               data-desc="Fusión por danza metamorana de Goku y Vegeta. Figura de alta precisión."
-               data-precio="$49.99">
-        </div>
+<main>
+      <section id="fusiones">
+        <div class="fusiones">
+        <h2> Fusiones más adquiridas</h2>
+      </div>
+      <section class ="Destacado"id="Destacado">
+    <div class="galeria">
+        <div class="borde-gogeta">
+        <img class="gogeta" src="IMG/Gogeta.jpg" alt="Gogeta">
+        </div>
 
-        <div class="borde-vegito">
-          <img class="vegito img-comic" 
-               src="IMG/Vegito.jpg" 
-               alt="Vegito"
-               data-titulo="Vegito Blue"
-               data-desc="Fusión mediante los pendientes Pothara. Incluye accesorios de ataque."
-               data-precio="$52.00">
-        </div>
-      </div>
-    </section>
-  </section>
+        <div class="borde-vegito">
+        <img class="vegito" src="IMG/Vegito.jpg" alt="Vegito">
+        </div>
 
-  <!-- Ventana emergente Pop Art -->
-  <dialog id="modal-figura" class="modal-comic">
-    <button id="cerrar-modal" class="btn-cerrar">X</button>
-    <div class="contenido-modal">
-      <img id="modal-img" src="" alt="Figura seleccionada">
-      <div class="modal-info">
-        <h3 id="modal-titulo">Cargando...</h3>
-        <p id="modal-desc"></p>
-        <div id="modal-precio" class="etiqueta-precio">$0.00</div>
-      </div>
-    </div>
-  </dialog>
+        </div>
+    </div>
+      </section>
 </main>
 
   <footer>
@@ -95,7 +71,6 @@
   const modal = document.getElementById('modal-figura');
   const btnCerrar = document.getElementById('cerrar-modal');
 
-  // Abre el modal al hacer clic en cualquier imagen con la clase img-comic
   document.querySelectorAll('.img-comic').forEach(imagen => {
     imagen.addEventListener('click', () => {
       document.getElementById('modal-img').src = imagen.src;
@@ -107,10 +82,8 @@
     });
   });
 
-  // Cerrar modal al presionar la X
   btnCerrar.addEventListener('click', () => modal.close());
 
-  // Cerrar al hacer clic en el fondo oscuro
   modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.close();
   });
